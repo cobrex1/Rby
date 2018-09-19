@@ -20,7 +20,7 @@ repositories {
 }
 
 dependencies {
-    compileOnly("org.spigotmc:spigot:1.13-R0.1-SNAPSHOT")
+    compileOnly("org.bukkit:bukkit:1.13-R0.1-SNAPSHOT")
     compileOnly("net.milkbowl.vault:VaultAPI:1.6")
     compileOnly("net.citizensnpcs:citizensapi:2.0.18-SNAPSHOT")
     compileOnly("me.clip:placeholderapi:2.7.1")
