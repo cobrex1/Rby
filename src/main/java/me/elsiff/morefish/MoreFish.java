@@ -1,8 +1,16 @@
 package me.elsiff.morefish;
 
 import me.elsiff.morefish.command.GeneralCommands;
-import me.elsiff.morefish.hooks.*;
-import me.elsiff.morefish.listener.*;
+import me.elsiff.morefish.hooks.CitizensHook;
+import me.elsiff.morefish.hooks.MCMMOHook;
+import me.elsiff.morefish.hooks.PlaceholderAPIHook;
+import me.elsiff.morefish.hooks.VaultHook;
+import me.elsiff.morefish.hooks.WorldGuardHook;
+import me.elsiff.morefish.listener.FishShopGUI;
+import me.elsiff.morefish.listener.FishingListener;
+import me.elsiff.morefish.listener.PlayerListener;
+import me.elsiff.morefish.listener.RewardsGUI;
+import me.elsiff.morefish.listener.SignListener;
 import me.elsiff.morefish.manager.BossBarManager;
 import me.elsiff.morefish.manager.ContestManager;
 import me.elsiff.morefish.manager.FishManager;
