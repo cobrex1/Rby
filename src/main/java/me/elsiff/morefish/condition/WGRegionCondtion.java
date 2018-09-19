@@ -15,7 +15,7 @@ public class WGRegionCondtion implements Condition {
     }
 
     @Override
-    public boolean isSatisfying(Player player) {
+    public boolean isSatisfied(Player player) {
         WorldGuardHook hooker = MoreFish.getInstance().getWorldGuardHook();
         return (hooker != null && hooker.containsLocation(player.getLocation(), regionId));
     }

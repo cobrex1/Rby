@@ -360,7 +360,7 @@ public class FishManager {
 
             boolean remove = false;
             for (Condition condition : fish.getConditions()) {
-                if (!condition.isSatisfying(player)) {
+                if (!condition.isSatisfied(player)) {
                     remove = true;
                 }
             }

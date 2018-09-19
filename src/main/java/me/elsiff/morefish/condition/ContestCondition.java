@@ -11,7 +11,7 @@ public class ContestCondition implements Condition {
     }
 
     @Override
-    public boolean isSatisfying(Player player) {
+    public boolean isSatisfied(Player player) {
         return (ongoing == MoreFish.getInstance().getContestManager().hasStarted());
     }
 }

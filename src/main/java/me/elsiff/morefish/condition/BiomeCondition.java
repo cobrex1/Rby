@@ -12,7 +12,7 @@ public class BiomeCondition implements Condition {
     }
 
     @Override
-    public boolean isSatisfying(Player player) {
+    public boolean isSatisfied(Player player) {
         Location loc = player.getLocation();
         return (biome == player.getWorld().getBiome(loc.getBlockX(), loc.getBlockZ()));
     }

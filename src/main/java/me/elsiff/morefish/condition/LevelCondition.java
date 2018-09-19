@@ -10,7 +10,7 @@ public class LevelCondition implements Condition {
     }
 
     @Override
-    public boolean isSatisfying(Player player) {
+    public boolean isSatisfied(Player player) {
         return (player.getLevel() >= level);
     }
 }

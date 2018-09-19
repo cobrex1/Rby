@@ -10,7 +10,7 @@ public class TimeCondition implements Condition {
     }
 
     @Override
-    public boolean isSatisfying(Player player) {
+    public boolean isSatisfied(Player player) {
         long tick = player.getWorld().getTime();
         switch (time) {
             case "day":

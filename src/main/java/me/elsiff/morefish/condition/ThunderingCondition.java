@@ -10,7 +10,7 @@ public class ThunderingCondition implements Condition {
     }
 
     @Override
-    public boolean isSatisfying(Player player) {
+    public boolean isSatisfied(Player player) {
         return (thundering == player.getWorld().isThundering());
     }
 }

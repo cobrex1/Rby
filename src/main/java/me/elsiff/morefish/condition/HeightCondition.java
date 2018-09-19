@@ -12,7 +12,7 @@ public class HeightCondition implements Condition {
     }
 
     @Override
-    public boolean isSatisfying(Player player) {
+    public boolean isSatisfied(Player player) {
         int y = player.getLocation().getBlockY();
         return (minHeight <= y) && (y <= maxHeight);
     }

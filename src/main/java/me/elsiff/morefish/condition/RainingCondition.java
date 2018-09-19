@@ -10,7 +10,7 @@ public class RainingCondition implements Condition {
     }
 
     @Override
-    public boolean isSatisfying(Player player) {
+    public boolean isSatisfied(Player player) {
         return (raining == player.getWorld().hasStorm());
     }
 }

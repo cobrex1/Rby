@@ -13,7 +13,7 @@ public class PotionEffectCondition implements Condition {
     }
 
     @Override
-    public boolean isSatisfying(Player player) {
+    public boolean isSatisfied(Player player) {
         return (player.hasPotionEffect(effectType) &&
                 player.getPotionEffect(effectType).getAmplifier() >= amplifier);
     }

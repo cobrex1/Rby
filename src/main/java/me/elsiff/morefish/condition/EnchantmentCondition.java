@@ -14,7 +14,7 @@ public class EnchantmentCondition implements Condition {
     }
 
     @Override
-    public boolean isSatisfying(Player player) {
+    public boolean isSatisfied(Player player) {
         ItemStack hand = player.getInventory().getItemInMainHand();
         return (hand != null && hand.containsEnchantment(enchantment) &&
                 hand.getEnchantmentLevel(enchantment) >= level);

@@ -17,7 +17,7 @@ public class MCMMOSkillCondition implements Condition {
     }
 
     @Override
-    public boolean isSatisfying(Player player) {
+    public boolean isSatisfied(Player player) {
         MCMMOHook hooker = MoreFish.getInstance().getMCMMOHook();
 
         if (hooker == null) {
