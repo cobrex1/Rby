@@ -1,4 +1,4 @@
-package me.elsiff.morefish.hooker;
+package me.elsiff.morefish.hooks;
 
 import com.gmail.nossr50.api.ExperienceAPI;
 import org.bukkit.entity.Player;
@@ -6,7 +6,7 @@ import org.bukkit.entity.Player;
 /**
  * Created by elsiff on 2017-06-20.
  */
-public class MCMMOHooker {
+public class MCMMOHook {
 
     public int getSkillLevel(Player player, String skillType) {
         return ExperienceAPI.getLevel(player, skillType);

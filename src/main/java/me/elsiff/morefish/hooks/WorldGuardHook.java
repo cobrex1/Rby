@@ -1,4 +1,4 @@
-package me.elsiff.morefish.hooker;
+package me.elsiff.morefish.hooks;
 
 import com.sk89q.worldguard.bukkit.WGBukkit;
 import com.sk89q.worldguard.protection.regions.ProtectedRegion;
@@ -7,7 +7,7 @@ import org.bukkit.Location;
 /**
  * Created by elsiff on 2017-06-20.
  */
-public class WorldGuardHooker {
+public class WorldGuardHook {
 
     public boolean containsLocation(Location loc, String regionId) {
         int x = loc.getBlockX();

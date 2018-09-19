@@ -1,7 +1,7 @@
 package me.elsiff.morefish;
 
 import me.elsiff.morefish.command.GeneralCommands;
-import me.elsiff.morefish.hooker.*;
+import me.elsiff.morefish.hooks.*;
 import me.elsiff.morefish.listener.*;
 import me.elsiff.morefish.manager.BossBarManager;
 import me.elsiff.morefish.manager.ContestManager;
@@ -29,11 +29,11 @@ public class MoreFish extends JavaPlugin {
     private BossBarManager bossBarManager;
     private UpdateChecker updateChecker;
 
-    private VaultHooker vaultHooker;
-    private CitizensHooker citizensHooker;
-    private PlaceholderAPIHooker placeholderAPIHooker;
-    private MCMMOHooker mcmmoHooker;
-    private WorldGuardHooker worldGuardHooker;
+    private VaultHook vaultHook;
+    private CitizensHook citizensHook;
+    private PlaceholderAPIHook placeholderAPIHook;
+    private MCMMOHook mcmmoHook;
+    private WorldGuardHook worldGuardHook;
 
     public static void setInstance(MoreFish moreFish) {
         instance = moreFish;
@@ -70,33 +70,33 @@ public class MoreFish extends JavaPlugin {
         manager.registerEvents(rewardsGUI, this);
 
         if (manager.getPlugin("Vault") != null && manager.getPlugin("Vault").isEnabled()) {
-            vaultHooker = new VaultHooker(this);
+            vaultHook = new VaultHook(this);
 
-            if (vaultHooker.setupEconomy()) {
+            if (vaultHook.setupEconomy()) {
                 getLogger().info("Found Vault for economy support.");
             } else {
-                vaultHooker = null;
+                vaultHook = null;
             }
         }
 
         if (manager.getPlugin("Citizens") != null && manager.getPlugin("Citizens").isEnabled()) {
-            citizensHooker = new CitizensHooker();
-            citizensHooker.registerTrait();
+            citizensHook = new CitizensHook();
+            citizensHook.registerTrait();
             getLogger().info("Found Citizens for Fish Shop Trait.");
         }
 
         if (manager.getPlugin("PlaceholderAPI") != null && manager.getPlugin("PlaceholderAPI").isEnabled()) {
-            placeholderAPIHooker = new PlaceholderAPIHooker(this);
+            placeholderAPIHook = new PlaceholderAPIHook(this);
             getLogger().info("Found PlaceholderAPI for placeholders support.");
         }
 
         if (manager.getPlugin("mcMMO") != null && manager.getPlugin("mcMMO").isEnabled()) {
-            mcmmoHooker = new MCMMOHooker();
+            mcmmoHook = new MCMMOHook();
             getLogger().info("Found mcMMO for MCMMO support.");
         }
 
         if (manager.getPlugin("WorldGuard") != null && manager.getPlugin("WorldGuard").isEnabled()) {
-            worldGuardHooker = new WorldGuardHooker();
+            worldGuardHook = new WorldGuardHook();
             getLogger().info("Found WorldGuard for regions support.");
         }
 
@@ -166,8 +166,8 @@ public class MoreFish extends JavaPlugin {
             contestManager.saveRecords();
         }
 
-        if (getCitizensHooker() != null) {
-            getCitizensHooker().deregisterTrait();
+        if (getCitizensHook() != null) {
+            getCitizensHook().deregisterTrait();
         }
 
         getLogger().info("Plugin has been disabled!");
@@ -241,26 +241,26 @@ public class MoreFish extends JavaPlugin {
     }
 
     public boolean hasEconomy() {
-        return (vaultHooker != null);
+        return (vaultHook != null);
     }
 
-    public VaultHooker getVaultHooker() {
-        return vaultHooker;
+    public VaultHook getVaultHook() {
+        return vaultHook;
     }
 
-    public CitizensHooker getCitizensHooker() {
-        return citizensHooker;
+    public CitizensHook getCitizensHook() {
+        return citizensHook;
     }
 
-    public PlaceholderAPIHooker getPlaceholderAPIHooker() {
-        return placeholderAPIHooker;
+    public PlaceholderAPIHook getPlaceholderAPIHook() {
+        return placeholderAPIHook;
     }
 
-    public MCMMOHooker getMCMMOHooker() {
-        return mcmmoHooker;
+    public MCMMOHook getMCMMOHook() {
+        return mcmmoHook;
     }
 
-    public WorldGuardHooker getWorldGuardHooker() {
-        return worldGuardHooker;
+    public WorldGuardHook getWorldGuardHook() {
+        return worldGuardHook;
     }
 }

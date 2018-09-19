@@ -1,14 +1,14 @@
-package me.elsiff.morefish.hooker;
+package me.elsiff.morefish.hooks;
 
 import me.clip.placeholderapi.external.EZPlaceholderHook;
 import me.elsiff.morefish.MoreFish;
 import me.elsiff.morefish.manager.ContestManager;
 import org.bukkit.entity.Player;
 
-public class PlaceholderAPIHooker extends EZPlaceholderHook {
+public class PlaceholderAPIHook extends EZPlaceholderHook {
     private final ContestManager contest;
 
-    public PlaceholderAPIHooker(MoreFish plugin) {
+    public PlaceholderAPIHook(MoreFish plugin) {
         super(plugin, "morefish");
         this.contest = plugin.getContestManager();
         this.hook();

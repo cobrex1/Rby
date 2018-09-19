@@ -1,14 +1,14 @@
-package me.elsiff.morefish.hooker;
+package me.elsiff.morefish.hooks;
 
 import me.elsiff.morefish.MoreFish;
 import net.milkbowl.vault.economy.Economy;
 import org.bukkit.plugin.RegisteredServiceProvider;
 
-public class VaultHooker {
+public class VaultHook {
     private final MoreFish plugin;
     private Economy econ = null;
 
-    public VaultHooker(MoreFish plugin) {
+    public VaultHook(MoreFish plugin) {
         this.plugin = plugin;
     }
 

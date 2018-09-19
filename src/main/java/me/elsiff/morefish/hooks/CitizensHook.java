@@ -1,12 +1,12 @@
-package me.elsiff.morefish.hooker;
+package me.elsiff.morefish.hooks;
 
 import net.citizensnpcs.api.CitizensAPI;
 import net.citizensnpcs.api.trait.TraitInfo;
 
-public class CitizensHooker {
+public class CitizensHook {
     private TraitInfo fishShop;
 
-    public CitizensHooker() {
+    public CitizensHook() {
         this.fishShop = TraitInfo.create(FishShopTrait.class).withName("fishshop");
     }
 

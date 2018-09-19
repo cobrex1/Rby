@@ -224,11 +224,11 @@ public class ContestManager {
     }
 
     private void sendCashPrize(OfflinePlayer player, double amount) {
-        if (!plugin.getVaultHooker().getEconomy().hasAccount(player)) {
+        if (!plugin.getVaultHook().getEconomy().hasAccount(player)) {
             plugin.getLogger().info(player.getName() + "'s reward of fishing contest has not been sent as having no economy account.");
             return;
         } else {
-            plugin.getVaultHooker().getEconomy().depositPlayer(player, amount);
+            plugin.getVaultHook().getEconomy().depositPlayer(player, amount);
         }
 
         if (player.isOnline()) {

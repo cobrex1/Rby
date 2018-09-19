@@ -1,7 +1,7 @@
 package me.elsiff.morefish.condition;
 
 import me.elsiff.morefish.MoreFish;
-import me.elsiff.morefish.hooker.WorldGuardHooker;
+import me.elsiff.morefish.hooks.WorldGuardHook;
 import org.bukkit.entity.Player;
 
 /**
@@ -16,7 +16,7 @@ public class WGRegionCondtion implements Condition {
 
     @Override
     public boolean isSatisfying(Player player) {
-        WorldGuardHooker hooker = MoreFish.getInstance().getWorldGuardHooker();
+        WorldGuardHook hooker = MoreFish.getInstance().getWorldGuardHook();
         return (hooker != null && hooker.containsLocation(player.getLocation(), regionId));
     }
 }

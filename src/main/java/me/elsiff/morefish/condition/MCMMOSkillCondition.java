@@ -1,7 +1,7 @@
 package me.elsiff.morefish.condition;
 
 import me.elsiff.morefish.MoreFish;
-import me.elsiff.morefish.hooker.MCMMOHooker;
+import me.elsiff.morefish.hooks.MCMMOHook;
 import org.bukkit.entity.Player;
 
 /**
@@ -18,7 +18,7 @@ public class MCMMOSkillCondition implements Condition {
 
     @Override
     public boolean isSatisfying(Player player) {
-        MCMMOHooker hooker = MoreFish.getInstance().getMCMMOHooker();
+        MCMMOHook hooker = MoreFish.getInstance().getMCMMOHook();
 
         if (hooker == null) {
             MoreFish.getInstance().getLogger().severe("MCMMO Not Found!");

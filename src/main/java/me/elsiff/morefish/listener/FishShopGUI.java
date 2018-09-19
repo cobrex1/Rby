@@ -99,7 +99,7 @@ public class FishShopGUI implements Listener {
                     Player player = (Player) event.getWhoClicked();
                     double price = getTotalPrice(event.getInventory());
 
-                    if (!plugin.hasEconomy() || !plugin.getVaultHooker().getEconomy().hasAccount(player)) {
+                    if (!plugin.hasEconomy() || !plugin.getVaultHook().getEconomy().hasAccount(player)) {
                         return;
                     }
 
@@ -121,7 +121,7 @@ public class FishShopGUI implements Listener {
                         return;
                     }
 
-                    plugin.getVaultHooker().getEconomy().depositPlayer(player, price);
+                    plugin.getVaultHook().getEconomy().depositPlayer(player, price);
 
                     String priceStr = getPriceString(price);
                     player.sendMessage(plugin.getLocale().getString("shop-sold")

@@ -1,4 +1,4 @@
-package me.elsiff.morefish.hooker;
+package me.elsiff.morefish.hooks;
 
 import me.elsiff.morefish.MoreFish;
 import net.citizensnpcs.api.event.NPCRightClickEvent;
