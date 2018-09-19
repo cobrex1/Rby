@@ -6,7 +6,6 @@ import me.elsiff.morefish.listener.*;
 import me.elsiff.morefish.manager.BossBarManager;
 import me.elsiff.morefish.manager.ContestManager;
 import me.elsiff.morefish.manager.FishManager;
-import me.elsiff.morefish.protocol.UpdateChecker;
 import org.bukkit.Material;
 import org.bukkit.command.ConsoleCommandSender;
 import org.bukkit.plugin.PluginManager;
@@ -27,7 +26,6 @@ public class MoreFish extends JavaPlugin {
     private FishManager fishManager;
     private ContestManager contestManager;
     private BossBarManager bossBarManager;
-    private UpdateChecker updateChecker;
 
     private VaultHook vaultHook;
     private CitizensHook citizensHook;
@@ -55,7 +53,6 @@ public class MoreFish extends JavaPlugin {
         this.rewardsGUI = new RewardsGUI(this);
         this.fishManager = new FishManager(this);
         this.contestManager = new ContestManager(this);
-        this.updateChecker = new UpdateChecker(this);
 
         // For 1.9+
         if (getConfig().getBoolean("general.use-boss-bar") && Material.getMaterial("SHIELD") != null) {
@@ -191,10 +188,6 @@ public class MoreFish extends JavaPlugin {
 
     public boolean hasBossBar() {
         return (getBossBarManager() != null);
-    }
-
-    public UpdateChecker getUpdateChecker() {
-        return updateChecker;
     }
 
     public String getOrdinal(int number) {

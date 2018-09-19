@@ -19,13 +19,6 @@ public class PlayerListener implements Listener {
 
     @EventHandler
     public void onJoin(PlayerJoinEvent event) {
-        if (event.getPlayer().isOp() && plugin.getConfig().getBoolean("general.check-update") &&
-                !plugin.getUpdateChecker().isUpToDate()) {
-            for (String msg : plugin.getLocale().getStringList("new-version")) {
-                event.getPlayer().sendMessage(String.format(msg, plugin.getUpdateChecker().getNewVersion()));
-            }
-        }
-
         if (plugin.hasBossBar() && plugin.getContestManager().hasStarted() && plugin.getContestManager().hasTimer()) {
             plugin.getBossBarManager().addPlayer(event.getPlayer());
         }
