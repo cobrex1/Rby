@@ -422,14 +422,15 @@ public class ContestManager {
         public void run() {
             passed++;
 
-            if (plugin.hasBossBar()) {
-                plugin.getBossBarManager().updateTimerBar(passed, timer);
-            }
-
             if (passed >= timer) {
                 plugin.getServer().dispatchCommand(plugin.getServer().getConsoleSender(), "morefish stop");
                 this.cancel();
             }
+
+            if (plugin.hasBossBar()) {
+                plugin.getBossBarManager().updateTimerBar(passed, timer);
+            }
+
         }
     }
 }
