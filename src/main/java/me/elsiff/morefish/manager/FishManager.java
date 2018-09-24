@@ -390,13 +390,13 @@ public class FishManager {
                 .concat("name:" + fish.getInternalName() + "|")
                 .concat("length:" + fish.getLength() + "|")
                 .concat("catcher:" + fish.getCatcher().getUniqueId())
-                .replaceAll("", "§");
+                .replaceAll("", String.valueOf(ChatColor.COLOR_CHAR));
         data = data.substring(0, data.length() - 1);
         return data;
     }
 
     private CaughtFish decodeFishData(String displayName) {
-        String[] split = displayName.replaceAll("§", "").split("\\|");
+        String[] split = displayName.replaceAll(String.valueOf(ChatColor.COLOR_CHAR), "").split("\\|");
         if (split.length < 1) {
             return null;
         }
