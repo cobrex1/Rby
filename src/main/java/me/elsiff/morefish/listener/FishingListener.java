@@ -77,6 +77,7 @@ public class FishingListener implements Listener {
 
     private void executeFishingActions(Player catcher, PlayerFishEvent event) {
         CaughtFish fish = plugin.getFishManager().generateRandomFish(catcher);
+        if (fish == null) return;
 
         PlayerCatchCustomFishEvent customEvent = new PlayerCatchCustomFishEvent(catcher, fish, event);
         plugin.getServer().getPluginManager().callEvent(customEvent);

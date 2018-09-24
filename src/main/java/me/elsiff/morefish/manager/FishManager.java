@@ -272,6 +272,7 @@ public class FishManager {
     public CaughtFish generateRandomFish(Player catcher) {
         Rarity rarity = getRandomRarity();
         CustomFish type = getRandomFish(rarity, catcher);
+        if (type == null) return null;
 
         return createCaughtFish(type, catcher);
     }
@@ -380,6 +381,8 @@ public class FishManager {
                 it.remove();
             }
         }
+
+        if (list.isEmpty()) return null;
 
         int index = random.nextInt(list.size());
         return list.get(index);
