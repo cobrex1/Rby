@@ -59,7 +59,7 @@ fish-list:
       icon:
         id: "minecraft:cod"
       commands:
-      - "minecraft:effect @p minecraft:poison 3 2"
+      - "minecraft:effect give @p minecraft:poison 3 2"
       - "tellraw @p [{\"text\":\" クラゲがあなたに好意を持っている!\",\"color\":\"none\"}]"
     Shrimp:
       display-name: "エビ"
@@ -173,7 +173,7 @@ fish-list:
       icon:
         id: "minecraft:cod"
       commands:
-      - "minecraft:effect @p minecraft:blindness 5 1"
+      - "minecraft:effect give @p minecraft:blindness 5 1"
       - "tellraw @p [{\"text\":\" イカがあなたにお祝いのスミを吐いた!\",\"color\":\"none\"}]"
     MinoKasago:
       display-name: "ミノカサゴ"
@@ -182,7 +182,7 @@ fish-list:
       icon:
         id: "minecraft:record_chirp"
       commands:
-      - "minecraft:effect @p minecraft:poison 3 2"
+      - "minecraft:effect give @p minecraft:poison 3 2"
     Flatfish:
       display-name: "マコガレイ"
       length-min: 40
@@ -268,7 +268,7 @@ fish-list:
         - "&7Get &9Strength I (2:00)&7 when you eat it."
       food-effects:
         commands:
-        - "minecraft:effect @p minecraft:strength 120 1"
+        - "minecraft:effect give @p minecraft:strength 120 1"
     PygmyWhale:
       display-name: "コセミクジラ"
       length-min: 600
@@ -283,4 +283,4 @@ fish-list:
         points: 20
         saturation: 14.4
         commands:
-        - "minecraft:effect @p minecraft:regeneration 2 127"
+        - "minecraft:effect give @p minecraft:regeneration 2 127"

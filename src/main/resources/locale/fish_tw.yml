@@ -149,7 +149,7 @@ fish-list:
       icon:
         id: "minecraft:cod"
       commands:
-      - "minecraft:effect @p minecraft:poison 3 1"
+      - "minecraft:effect give @p minecraft:poison 3 1"
       - "tellraw @p [\"\",{\"text\":\"[MoreFish]\",\"color\":\"aqua\"},{\"text\":\" 這水母讓你感覺不是很好!\",\"color\":\"none\"}]"
     Squid:
       display-name: "烏賊"
@@ -158,7 +158,7 @@ fish-list:
       icon:
         id: "minecraft:ink_sac"
       commands:
-      - "minecraft:effect @p minecraft:blindness 5 1"
+      - "minecraft:effect give @p minecraft:blindness 5 1"
       - "tellraw @p [\"\",{\"text\":\"[MoreFish]\",\"color\":\"aqua\"},{\"text\":\" 這烏賊噴你一臉墨汁!\",\"color\":\"none\"}]"
     Flatfish:
       display-name: "比目魚"
@@ -227,7 +227,7 @@ fish-list:
         - "&7獲得 &9力量 I (2:00)&7 當你吃了牠."
       food-effects:
         commands:
-        - "minecraft:effect @p minecraft:strength 120 1"
+        - "minecraft:effect give @p minecraft:strength 120 1"
     PygmyWhale:
       display-name: "抹香鯨"
       length-min: 600
@@ -242,4 +242,4 @@ fish-list:
         points: 20
         saturation: 14.4
         commands:
-        - "minecraft:effect @p minecraft:regeneration 2 127"
+        - "minecraft:effect give @p minecraft:regeneration 2 127"
