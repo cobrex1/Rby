@@ -23,13 +23,13 @@ repositories {
 }
 
 dependencies {
-    compileOnly("org.bukkit:bukkit:1.13-R0.1-SNAPSHOT")
-    compileOnly("net.milkbowl.vault:VaultAPI:1.6")
-    compileOnly("net.citizensnpcs:citizensapi:2.0.18-SNAPSHOT")
-    compileOnly("me.clip:placeholderapi:2.7.1")
+    compileOnly("org.bukkit:bukkit:1.13.1-R0.1-SNAPSHOT")
+    compileOnly("net.milkbowl.vault:VaultAPI:1.7")
+    compileOnly("net.citizensnpcs:citizensapi:2.0.24-SNAPSHOT")
+    compileOnly("me.clip:placeholderapi:2.9.2")
     compileOnly("com.sk89q:worldedit:bukkit-7.0.0-SNAPSHOT-dist:10403")
     compileOnly("com.sk89q:worldguard:legacy-7.0.0-SNAPSHOT-dist:10401")
-    compileOnly("com.github.mcMMO-Dev:mcMMO:fa1bbd2")
+    compileOnly("com.github.mcMMO-Dev:mcMMO:592c3a2142")
 }
 
 bukkit {
