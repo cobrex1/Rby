@@ -6,7 +6,7 @@ plugins {
 }
 
 group = "me.elsiff"
-version = "2.2-SNAPSHOT"
+version = "2.2"
 
 repositories {
     jcenter()
@@ -34,8 +34,7 @@ dependencies {
 
 bukkit {
     name = "MoreFish"
-    author = "elsiff"
-    website = "http://elsiff.me"
+    authors = listOf("elsiff", "piratjsk")
     main = "me.elsiff.morefish.MoreFish"
     softDepend = listOf("Vault", "Citizens", "PlaceholderAPI", "mcMMO", "WorldGuard")
     apiVersion = "1.13"
@@ -65,3 +64,6 @@ bukkit {
         }
     }
 }
+
+val jar: Jar by tasks
+jar.from("LICENSE")
