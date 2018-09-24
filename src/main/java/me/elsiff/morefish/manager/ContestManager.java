@@ -425,6 +425,7 @@ public class ContestManager {
             if (passed >= timer) {
                 plugin.getServer().dispatchCommand(plugin.getServer().getConsoleSender(), "morefish stop");
                 this.cancel();
+                return;
             }
 
             if (plugin.hasBossBar()) {
