@@ -14,7 +14,11 @@ repositories {
     maven("http://nexus.hc.to/content/repositories/pub_releases")
     maven("http://repo.citizensnpcs.co/")
     maven("http://repo.extendedclip.com/content/repositories/placeholderapi/")
-    maven("http://maven.sk89q.com/repo/")
+    ivy("http://builds.enginehub.org/job/") {
+        layout("pattern") {
+            (this as IvyPatternRepositoryLayout).artifact("[module]/[classifier]/download/[module]-[revision].jar")
+        }
+    }
     maven("https://jitpack.io")
 }
 
@@ -23,7 +27,8 @@ dependencies {
     compileOnly("net.milkbowl.vault:VaultAPI:1.6")
     compileOnly("net.citizensnpcs:citizensapi:2.0.18-SNAPSHOT")
     compileOnly("me.clip:placeholderapi:2.7.1")
-    compileOnly("com.sk89q:worldguard:6.1")
+    compileOnly("com.sk89q:worldedit:bukkit-7.0.0-SNAPSHOT-dist:10403")
+    compileOnly("com.sk89q:worldguard:legacy-7.0.0-SNAPSHOT-dist:10401")
     compileOnly("com.github.mcMMO-Dev:mcMMO:fa1bbd2")
 }
 
