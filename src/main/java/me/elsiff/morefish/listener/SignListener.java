@@ -1,6 +1,6 @@
 package me.elsiff.morefish.listener;
 
-import me.elsiff.morefish.MoreFish;
+import me.elsiff.morefish.Rby;
 import org.bukkit.ChatColor;
 import org.bukkit.block.Sign;
 import org.bukkit.event.EventHandler;
@@ -10,9 +10,9 @@ import org.bukkit.event.block.SignChangeEvent;
 import org.bukkit.event.player.PlayerInteractEvent;
 
 public class SignListener implements Listener {
-    private MoreFish plugin;
+    private Rby plugin;
 
-    public SignListener(MoreFish plugin) {
+    public SignListener(Rby plugin) {
         this.plugin = plugin;
     }
 

@@ -1,6 +1,6 @@
 package me.elsiff.morefish.command;
 
-import me.elsiff.morefish.MoreFish;
+import me.elsiff.morefish.Rby;
 import me.elsiff.morefish.manager.ContestManager;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
@@ -13,10 +13,10 @@ import java.util.Iterator;
 import java.util.List;
 
 public class GeneralCommands implements CommandExecutor, TabCompleter {
-    private final MoreFish plugin;
+    private final Rby plugin;
     private final ContestManager contest;
 
-    public GeneralCommands(MoreFish plugin) {
+    public GeneralCommands(Rby plugin) {
         this.plugin = plugin;
         this.contest = plugin.getContestManager();
     }
@@ -25,7 +25,7 @@ public class GeneralCommands implements CommandExecutor, TabCompleter {
         List<String> list = new ArrayList<>();
 
         if (args.length < 2) {
-            if (sender.hasPermission("morefish.admin")) {
+            if (sender.hasPermission("rby.admin")) {
                 list.add("help");
                 list.add("start");
                 list.add("stop");
@@ -33,11 +33,11 @@ public class GeneralCommands implements CommandExecutor, TabCompleter {
                 list.add("rewards");
             }
 
-            if (sender.hasPermission("morefish.top")) {
+            if (sender.hasPermission("rby.top")) {
                 list.add("top");
             }
 
-            if (sender.hasPermission("morefish.shop")) {
+            if (sender.hasPermission("rby.shop")) {
                 list.add("shop");
             }
         }
@@ -55,13 +55,13 @@ public class GeneralCommands implements CommandExecutor, TabCompleter {
 
     public boolean onCommand(CommandSender sender, Command cmd, String label, String[] args) {
         if (args.length < 1 || "help".equalsIgnoreCase(args[0])) {
-            if (!sender.hasPermission("morefish.help")) {
+            if (!sender.hasPermission("rby.help")) {
                 sender.sendMessage(plugin.getLocale().getString("no-permission"));
                 return true;
             }
 
-            String prefix = "§b[MoreFish]§r ";
-            sender.sendMessage(prefix + "§3> ===== §b§lMoreFish §bv" + plugin.getDescription().getVersion() + "§3 ===== <");
+            String prefix = "§b[Rby]§r ";
+            sender.sendMessage(prefix + "§3> ===== §b§lRby §bv" + plugin.getDescription().getVersion() + "§3 ===== <");
             sender.sendMessage(prefix + "/" + label + " help");
             sender.sendMessage(prefix + "/" + label + " start [runningTime (sec)]");
             sender.sendMessage(prefix + "/" + label + " stop");
@@ -73,7 +73,7 @@ public class GeneralCommands implements CommandExecutor, TabCompleter {
 
             return true;
         } else if ("start".equalsIgnoreCase(args[0])) {
-            if (!sender.hasPermission("morefish.admin")) {
+            if (!sender.hasPermission("rby.admin")) {
                 sender.sendMessage(plugin.getLocale().getString("no-permission"));
                 return true;
             }
@@ -129,7 +129,7 @@ public class GeneralCommands implements CommandExecutor, TabCompleter {
 
             return true;
         } else if ("stop".equalsIgnoreCase(args[0])) {
-            if (!sender.hasPermission("morefish.admin")) {
+            if (!sender.hasPermission("rby.admin")) {
                 sender.sendMessage(plugin.getLocale().getString("no-permission"));
                 return true;
             }
@@ -159,7 +159,7 @@ public class GeneralCommands implements CommandExecutor, TabCompleter {
 
             return true;
         } else if ("clear".equalsIgnoreCase(args[0])) {
-            if (!sender.hasPermission("morefish.admin")) {
+            if (!sender.hasPermission("rby.admin")) {
                 sender.sendMessage(plugin.getLocale().getString("no-permission"));
                 return true;
             }
@@ -175,7 +175,7 @@ public class GeneralCommands implements CommandExecutor, TabCompleter {
 
             return true;
         } else if ("reload".equalsIgnoreCase(args[0])) {
-            if (!sender.hasPermission("morefish.admin")) {
+            if (!sender.hasPermission("rby.admin")) {
                 sender.sendMessage(plugin.getLocale().getString("no-permission"));
                 return true;
             }
@@ -196,7 +196,7 @@ public class GeneralCommands implements CommandExecutor, TabCompleter {
 
             return true;
         } else if ("top".equalsIgnoreCase(args[0])) {
-            if (!sender.hasPermission("morefish.top")) {
+            if (!sender.hasPermission("rby.top")) {
                 sender.sendMessage(plugin.getLocale().getString("no-permission"));
                 return true;
             }
@@ -222,7 +222,7 @@ public class GeneralCommands implements CommandExecutor, TabCompleter {
 
             Player player = (Player) sender;
 
-            if (!player.hasPermission("morefish.admin")) {
+            if (!player.hasPermission("rby.admin")) {
                 player.sendMessage(plugin.getLocale().getString("no-permission"));
                 return true;
             }
@@ -232,7 +232,7 @@ public class GeneralCommands implements CommandExecutor, TabCompleter {
             return true;
         } else if ("shop".equalsIgnoreCase(args[0])) {
             if (args.length < 2) {
-                if (!sender.hasPermission("morefish.shop")) {
+                if (!sender.hasPermission("rby.shop")) {
                     sender.sendMessage(plugin.getLocale().getString("no-permission"));
                     return true;
                 }
@@ -251,7 +251,7 @@ public class GeneralCommands implements CommandExecutor, TabCompleter {
 
                 plugin.getFishShopGUI().openGUI(player);
             } else {
-                if (!sender.hasPermission("morefish.admin")) {
+                if (!sender.hasPermission("rby.admin")) {
                     sender.sendMessage(plugin.getLocale().getString("no-permission"));
                     return true;
                 }

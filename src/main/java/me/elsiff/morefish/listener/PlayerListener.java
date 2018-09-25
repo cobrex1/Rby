@@ -2,7 +2,7 @@ package me.elsiff.morefish.listener;
 
 import me.elsiff.morefish.CaughtFish;
 import me.elsiff.morefish.CustomFish;
-import me.elsiff.morefish.MoreFish;
+import me.elsiff.morefish.Rby;
 import org.bukkit.ChatColor;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.EventPriority;
@@ -11,9 +11,9 @@ import org.bukkit.event.player.PlayerItemConsumeEvent;
 import org.bukkit.event.player.PlayerJoinEvent;
 
 public class PlayerListener implements Listener {
-    private MoreFish plugin;
+    private Rby plugin;
 
-    public PlayerListener(MoreFish plugin) {
+    public PlayerListener(Rby plugin) {
         this.plugin = plugin;
     }
 

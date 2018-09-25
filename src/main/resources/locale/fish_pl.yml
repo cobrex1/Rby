@@ -1,5 +1,5 @@
 #
-# fish_pl.yml for MoreFish
+# fish_pl.yml for Rby
 # translated by MashuuMidori (2.1.0)
 #
 # Wiki:
@@ -150,7 +150,7 @@ fish-list:
         id: "minecraft:cod"
       commands:
       - "minecraft:effect give @p minecraft:poison 3 1"
-      - "tellraw @p [\"\",{\"text\":\"[MoreFish]\",\"color\":\"aqua\"},{\"text\":\" Przez meduzę czujesz się bardzo źle!\",\"color\":\"none\"}]"
+      - "tellraw @p [\"\",{\"text\":\"[Rby]\",\"color\":\"aqua\"},{\"text\":\" Przez meduzę czujesz się bardzo źle!\",\"color\":\"none\"}]"
     Squid:
       display-name: "Kałamarnica"
       length-min: 30
@@ -159,7 +159,7 @@ fish-list:
         id: "minecraft:ink_sac"
       commands:
       - "minecraft:effect give @p minecraft:blindness 5 1"
-      - "tellraw @p [\"\",{\"text\":\"[MoreFish]\",\"color\":\"aqua\"},{\"text\":\" Kałamarnica podarowała ci nieco ciemności!\",\"color\":\"none\"}]"
+      - "tellraw @p [\"\",{\"text\":\"[Rby]\",\"color\":\"aqua\"},{\"text\":\" Kałamarnica podarowała ci nieco ciemności!\",\"color\":\"none\"}]"
     Flatfish:
       display-name: "Płastuga"
       length-min: 40

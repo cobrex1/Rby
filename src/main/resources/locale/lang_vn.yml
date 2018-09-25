@@ -1,5 +1,5 @@
 #
-# lang_vn.yml for MoreFish
+# lang_vn.yml for Rby
 # translated by huynhqtienvtag (2.1.0)
 #
 
@@ -11,14 +11,14 @@ version: 210
 # %rarity_color% - The color of rarity
 # %fish% - The name of fish
 # %fish_with_rarity% - The text whose format is "[Rarity] [Fish Name]" (with color)
-catch-fish: "&b[MoreFish]&r &e%player%&r đã câu được %rarity_color%%length%cm &l%fish_with_rarity%"
-get-1st: "&b[MoreFish]&r &e%player%&r là người dẫn đầu mới!"
-no-fishing-allowed: "&b[MoreFish]&r Bạn không thể đánh cá trừ khi cuộc thi đang diễn ra."
+catch-fish: "&b[Rby]&r &e%player%&r đã câu được %rarity_color%%length%cm &l%fish_with_rarity%"
+get-1st: "&b[Rby]&r &e%player%&r là người dẫn đầu mới!"
+no-fishing-allowed: "&b[Rby]&r Bạn không thể đánh cá trừ khi cuộc thi đang diễn ra."
 
 # %time% - The left time of contest (e.g. 1m 23s)
-contest-start: "&b[MoreFish]&r Cuộc thi câu cá đã bắt đầu!"
-contest-start-timer: "&b[MoreFish]&r Cuộc thi sẽ kết thúc trong %time%."
-contest-stop: "&b[MoreFish]&r Cuộc thi câu cá đã kết thúc!"
+contest-start: "&b[Rby]&r Cuộc thi câu cá đã bắt đầu!"
+contest-start-timer: "&b[Rby]&r Cuộc thi sẽ kết thúc trong %time%."
+contest-stop: "&b[Rby]&r Cuộc thi câu cá đã kết thúc!"
 timer-boss-bar: "&b&lCuộc thi câu cá &r[%time% còn lại]"
 time-format-minutes: "phút"
 time-format-seconds: "giây"
@@ -28,32 +28,32 @@ time-format-seconds: "giây"
 # %player% - The name of fisher
 # %length% - The length of fish
 # %fish% - The name of fish
-top-list: "&b[MoreFish]&r &e%ordinal%. &7: %player%, %length%cm %fish%"
-top-no-record: "&b[MoreFish]&r Chưa ai đạt kỉ lục cả."
-top-mine: "&b[MoreFish]&r Bạn ở hạng %ordinal%: %length%cm %fish%"
-top-mine-no-record: "&b[MoreFish]&r Bạn chưa đạt kỉ lục nào."
+top-list: "&b[Rby]&r &e%ordinal%. &7: %player%, %length%cm %fish%"
+top-no-record: "&b[Rby]&r Chưa ai đạt kỉ lục cả."
+top-mine: "&b[Rby]&r Bạn ở hạng %ordinal%: %length%cm %fish%"
+top-mine-no-record: "&b[Rby]&r Bạn chưa đạt kỉ lục nào."
 
 # %amount% - The amount of given money
 # %ordinal% - The ordinal of player's rank (e.g. 1st, 2nd, 3rd, 4th)
 # %number% - The numeric rank of player
 # %player% - The name of fisher
-reward: "&b[MoreFish]&r Bạn nhận được &e%item%&r như là phần thưởng hạng %ordinal%!"
-reward-cash-prize: "&b[MoreFish]&r Bạn nhận được &e%amount%&r như là phần thưởng hạng %ordinal%!"
+reward: "&b[Rby]&r Bạn nhận được &e%item%&r như là phần thưởng hạng %ordinal%!"
+reward-cash-prize: "&b[Rby]&r Bạn nhận được &e%amount%&r như là phần thưởng hạng %ordinal%!"
 
-no-permission: "&b[MoreFish]&r Bạn không có quyền."
-already-ongoing: "&b[MoreFish]&r Cuộc thi đang diễn ra."
-already-stopped: "&b[MoreFish]&r Cuộc thi đã kết thúc."
-not-number: "&b[MoreFish]&r '%s' là số không hợp lệ."
-not-positive: "&b[MoreFish]&r Chỉ số dương mới hợp lệ."
-not-ongoing: "&b[MoreFish]&r Cuộc thi chưa diễn ra."
-clear-records: "&b[MoreFish]&r Kỉ lục đã được xóa."
-reload-config: "&b[MoreFish]&r Reload config thành công."
-failed-to-reload: "&b[MoreFish]&r Failed to reload: Please check your console."
-in-game-command: "&b[MoreFish]&r This is an in-game command."
-shop-disabled: "&b[MoreFish]&r Cửa hàng cá đã vô hiệu hóa."
-player-not-found: "&b[MoreFish]&r Không ai có tên '%s'."
-forced-player-to-shop: "&b[MoreFish]&r Đã ép %s mở Shop."
-invalid-command: "&b[MoreFish]&r Lệnh không tồn tại."
+no-permission: "&b[Rby]&r Bạn không có quyền."
+already-ongoing: "&b[Rby]&r Cuộc thi đang diễn ra."
+already-stopped: "&b[Rby]&r Cuộc thi đã kết thúc."
+not-number: "&b[Rby]&r '%s' là số không hợp lệ."
+not-positive: "&b[Rby]&r Chỉ số dương mới hợp lệ."
+not-ongoing: "&b[Rby]&r Cuộc thi chưa diễn ra."
+clear-records: "&b[Rby]&r Kỉ lục đã được xóa."
+reload-config: "&b[Rby]&r Reload config thành công."
+failed-to-reload: "&b[Rby]&r Failed to reload: Please check your console."
+in-game-command: "&b[Rby]&r This is an in-game command."
+shop-disabled: "&b[Rby]&r Cửa hàng cá đã vô hiệu hóa."
+player-not-found: "&b[Rby]&r Không ai có tên '%s'."
+forced-player-to-shop: "&b[Rby]&r Đã ép %s mở Shop."
+invalid-command: "&b[Rby]&r Lệnh không tồn tại."
 
 rewards-gui-title: "Đặt những phần thưởng của cuộc thi"
 rewards-guide-icon-name: "&bĐặt item vào slot!"
@@ -75,22 +75,22 @@ rewards-emerald-icon-name: "&aPhần thưởng cho %ordinal%: $&2%amount%"
 rewards-emerald-icon-lore:
 - "&7Nhấp để chỉnh"
 enter-cash-prize:
-- "&b[MoreFish]&r Nhập giá trị vào khung chat."
-- "&b[MoreFish]&r hoặc nhập 'cancel' để hủy bỏ."
-entered-cancel: "&b[MoreFish]&r Đã dừng chỉnh."
-entered-not-number: "&b[MoreFish]&r '%s' là số không hợp lệ. Vui lòng nhập lại."
-entered-not-positive: "&b[MoreFish]&r Số không được nhỏ hơn 0. Vui lòng nhập số lớn hơn."
-entered-successfully: "&b[MoreFish]&r Đã nhập giá trị."
-saved-changes: "&b[MoreFish]&r Sự thay đổi đã được lưu."
+- "&b[Rby]&r Nhập giá trị vào khung chat."
+- "&b[Rby]&r hoặc nhập 'cancel' để hủy bỏ."
+entered-cancel: "&b[Rby]&r Đã dừng chỉnh."
+entered-not-number: "&b[Rby]&r '%s' là số không hợp lệ. Vui lòng nhập lại."
+entered-not-positive: "&b[Rby]&r Số không được nhỏ hơn 0. Vui lòng nhập số lớn hơn."
+entered-successfully: "&b[Rby]&r Đã nhập giá trị."
+saved-changes: "&b[Rby]&r Sự thay đổi đã được lưu."
 
 # %price% - The price of fish
 shop-gui-title: "Đặt cá của bạn vào để bán"
 shop-emerald-icon-name: "&aBán để nhận $%price%"
-shop-sold: "&b[MoreFish]&r Bạn đã bán để nhận &a$%price%&r."
-shop-no-fish: "&b[MoreFish]&r Không có cá để bán. Vui lòng bỏ cá vào."
-created-sign-shop: "&b[MoreFish]&r Bạn đã tạo Cửa hàng Cá!"
+shop-sold: "&b[Rby]&r Bạn đã bán để nhận &a$%price%&r."
+shop-no-fish: "&b[Rby]&r Không có cá để bán. Vui lòng bỏ cá vào."
+created-sign-shop: "&b[Rby]&r Bạn đã tạo Cửa hàng Cá!"
 
-old-file: "&c[MoreFish] Your %s is too old! Please make it up-to-date."
+old-file: "&c[Rby] Your %s is too old! Please make it up-to-date."
 new-version:
-- "&b[MoreFish]&r New version found: %s"
-- "&b[MoreFish]&r https://www.spigotmc.org/resources/morefish.22926/"
+- "&b[Rby]&r New version found: %s"
+- "&b[Rby]&r https://www.spigotmc.org/resources/morefish.22926/"

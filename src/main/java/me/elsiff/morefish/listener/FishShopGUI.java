@@ -2,7 +2,7 @@ package me.elsiff.morefish.listener;
 
 import com.google.common.math.DoubleMath;
 import me.elsiff.morefish.CaughtFish;
-import me.elsiff.morefish.MoreFish;
+import me.elsiff.morefish.Rby;
 import me.elsiff.morefish.util.ItemBuilder;
 import org.bukkit.Material;
 import org.bukkit.entity.Player;
@@ -19,10 +19,10 @@ import java.util.Set;
 import java.util.UUID;
 
 public class FishShopGUI implements Listener {
-    private final MoreFish plugin;
+    private final Rby plugin;
     private final Set<UUID> users = new HashSet<>();
 
-    public FishShopGUI(MoreFish plugin) {
+    public FishShopGUI(Rby plugin) {
         this.plugin = plugin;
     }
 

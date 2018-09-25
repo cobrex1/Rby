@@ -1,7 +1,7 @@
 package me.elsiff.morefish.listener;
 
 import me.elsiff.morefish.CaughtFish;
-import me.elsiff.morefish.MoreFish;
+import me.elsiff.morefish.Rby;
 import me.elsiff.morefish.event.PlayerCatchCustomFishEvent;
 import me.elsiff.morefish.manager.ContestManager;
 import org.bukkit.ChatColor;
@@ -24,10 +24,10 @@ import java.util.HashSet;
 import java.util.Set;
 
 public class FishingListener implements Listener {
-    private final MoreFish plugin;
+    private final Rby plugin;
     private final ContestManager contest;
 
-    public FishingListener(MoreFish plugin) {
+    public FishingListener(Rby plugin) {
         this.plugin = plugin;
         this.contest = plugin.getContestManager();
     }

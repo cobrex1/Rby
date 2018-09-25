@@ -1,6 +1,6 @@
 package me.elsiff.morefish.condition;
 
-import me.elsiff.morefish.MoreFish;
+import me.elsiff.morefish.Rby;
 import org.bukkit.entity.Player;
 
 public class ContestCondition implements Condition {
@@ -12,6 +12,6 @@ public class ContestCondition implements Condition {
 
     @Override
     public boolean isSatisfied(Player player) {
-        return (ongoing == MoreFish.getInstance().getContestManager().hasStarted());
+        return (ongoing == Rby.getInstance().getContestManager().hasStarted());
     }
 }

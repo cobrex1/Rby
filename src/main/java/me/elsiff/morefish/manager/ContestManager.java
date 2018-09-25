@@ -1,7 +1,7 @@
 package me.elsiff.morefish.manager;
 
 import me.elsiff.morefish.CaughtFish;
-import me.elsiff.morefish.MoreFish;
+import me.elsiff.morefish.Rby;
 import org.bukkit.Material;
 import org.bukkit.OfflinePlayer;
 import org.bukkit.configuration.file.FileConfiguration;
@@ -24,7 +24,7 @@ import java.util.UUID;
 public class ContestManager {
     private static final String PREFIX_REWARD = "reward_";
     private static final String PREFIX_CASH_PRIZE = "cash-prize_";
-    private final MoreFish plugin;
+    private final Rby plugin;
     private final RecordComparator comparator = new RecordComparator();
     private final List<Record> recordList = new ArrayList<>();
     private final File fileRewards;
@@ -34,7 +34,7 @@ public class ContestManager {
     private boolean hasStarted = false;
     private TimerTask task = null;
 
-    public ContestManager(MoreFish plugin) {
+    public ContestManager(Rby plugin) {
         this.plugin = plugin;
 
         if (plugin.getConfig().getBoolean("general.auto-start")) {

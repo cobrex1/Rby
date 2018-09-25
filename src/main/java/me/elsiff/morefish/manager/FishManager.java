@@ -2,7 +2,7 @@ package me.elsiff.morefish.manager;
 
 import me.elsiff.morefish.CaughtFish;
 import me.elsiff.morefish.CustomFish;
-import me.elsiff.morefish.MoreFish;
+import me.elsiff.morefish.Rby;
 import me.elsiff.morefish.Rarity;
 import me.elsiff.morefish.condition.BiomeCondition;
 import me.elsiff.morefish.condition.Condition;
@@ -35,14 +35,14 @@ import java.text.SimpleDateFormat;
 import java.util.*;
 
 public class FishManager {
-    private final MoreFish plugin;
+    private final Rby plugin;
     private final Random random = new Random();
     private final SimpleDateFormat dateFormat = new SimpleDateFormat("MM/dd/yy HH:mm");
     private final List<Rarity> rarityList = new ArrayList<>();
     private final Map<String, CustomFish> fishMap = new HashMap<>();
     private final Map<Rarity, List<CustomFish>> rarityMap = new HashMap<>();
 
-    public FishManager(MoreFish plugin) {
+    public FishManager(Rby plugin) {
         this.plugin = plugin;
 
         loadFishList();

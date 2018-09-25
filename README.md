@@ -1,4 +1,4 @@
-# MoreFish
+# Rby
 
 Updated to 1.13 fork of [elsiff](https://github.com/elsiff)'s bukkit plugin [MoreFish](https://github.com/elsiff/more-fish).
 

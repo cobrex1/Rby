@@ -23,8 +23,8 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.List;
 
-public class MoreFish extends JavaPlugin {
-    private static MoreFish instance;
+public class Rby extends JavaPlugin {
+    private static Rby instance;
     private PluginManager manager;
     private int taskId = -1;
 
@@ -41,11 +41,11 @@ public class MoreFish extends JavaPlugin {
     private MCMMOHook mcmmoHook;
     private WorldGuardHook worldGuardHook;
 
-    public static void setInstance(MoreFish moreFish) {
-        instance = moreFish;
+    public static void setInstance(Rby rby) {
+        instance = rby;
     }
 
-    public static MoreFish getInstance() {
+    public static Rby getInstance() {
         return instance;
     }
 

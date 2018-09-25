@@ -11,14 +11,14 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Locale {
-    private final MoreFish plugin;
+    private final Rby plugin;
     private final File folder;
     private final String langPath;
     private final String fishPath;
     private FileConfiguration lang;
     private FileConfiguration fish;
 
-    public Locale(MoreFish plugin) {
+    public Locale(Rby plugin) {
         this.plugin = plugin;
 
         String locale = plugin.getConfig().getString("general.locale");

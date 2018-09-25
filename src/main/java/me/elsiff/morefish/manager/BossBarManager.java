@@ -1,16 +1,16 @@
 package me.elsiff.morefish.manager;
 
-import me.elsiff.morefish.MoreFish;
+import me.elsiff.morefish.Rby;
 import org.bukkit.boss.BarColor;
 import org.bukkit.boss.BarStyle;
 import org.bukkit.boss.BossBar;
 import org.bukkit.entity.Player;
 
 public class BossBarManager {
-    private final MoreFish plugin;
+    private final Rby plugin;
     private BossBar timerBar;
 
-    public BossBarManager(MoreFish plugin) {
+    public BossBarManager(Rby plugin) {
         this.plugin = plugin;
     }
 

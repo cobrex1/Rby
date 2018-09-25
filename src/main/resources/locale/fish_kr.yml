@@ -1,5 +1,5 @@
 #
-# fish_en.yml for MoreFish
+# fish_en.yml for Rby
 # by elsiff (이프)
 #
 # Wiki:
@@ -144,7 +144,7 @@ fish-list:
         id: "minecraft:cod"
       commands:
       - "minecraft:effect give @p minecraft:poison 3 1"
-      - "tellraw @p [\"\",{\"text\":\"[MoreFish]\",\"color\":\"aqua\"},{\"text\":\" 해파리가 당신에게 헤롱헤롱한 기분을 선물했습니다!\",\"color\":\"none\"}]"
+      - "tellraw @p [\"\",{\"text\":\"[Rby]\",\"color\":\"aqua\"},{\"text\":\" 해파리가 당신에게 헤롱헤롱한 기분을 선물했습니다!\",\"color\":\"none\"}]"
     Squid:
       display-name: "오징어"
       length-min: 30
@@ -153,7 +153,7 @@ fish-list:
         id: "minecraft:ink_sac"
       commands:
       - "minecraft:effect give @p minecraft:blindness 5 1"
-      - "tellraw @p [\"\",{\"text\":\"[MoreFish]\",\"color\":\"aqua\"},{\"text\":\" 오징어가 발악하며 당신의 얼굴에 먹물을 쏘았습니다!\",\"color\":\"none\"}]"
+      - "tellraw @p [\"\",{\"text\":\"[Rby]\",\"color\":\"aqua\"},{\"text\":\" 오징어가 발악하며 당신의 얼굴에 먹물을 쏘았습니다!\",\"color\":\"none\"}]"
     Flatfish:
       display-name: "가자미"
       length-min: 40

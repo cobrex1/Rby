@@ -5,7 +5,7 @@ plugins {
     id("net.minecrell.plugin-yml.bukkit") version "0.3.0"
 }
 
-group = "me.elsiff"
+group = "net.piratjsk"
 version = "2.2"
 
 repositories {
@@ -33,34 +33,28 @@ dependencies {
 }
 
 bukkit {
-    name = "MoreFish"
-    authors = listOf("elsiff", "piratjsk")
-    main = "me.elsiff.morefish.MoreFish"
+    name = "Rby"
+    authors = listOf("piratjsk", "elsiff")
+    main = "net.piratjsk.rby.Rby"
     softDepend = listOf("Vault", "Citizens", "PlaceholderAPI", "mcMMO", "WorldGuard")
     apiVersion = "1.13"
     commands {
-        register("morefish") {
-            description = "Main command for MoreFish."
-            usage = "/morefish"
-            aliases = listOf("mf", "fish")
+        register("rby") {
+            aliases = listOf("morefish", "mf", "fish")
         }
     }
     permissions {
-        register("morefish.admin") {
+        register("rby.admin") {
             default = BukkitPluginDescription.Permission.Default.OP
-            description = "Give user ability to control the fishing contest."
         }
-        register("morefish.help") {
+        register("rby.help") {
             default = BukkitPluginDescription.Permission.Default.TRUE
-            description = "Player with this permission can use the help command."
         }
-        register("morefish.top") {
+        register("rby.top") {
             default = BukkitPluginDescription.Permission.Default.TRUE
-            description = "Player with this permission can use /morefish top command."
         }
-        register("morefish.shop") {
+        register("rby.shop") {
             default = BukkitPluginDescription.Permission.Default.OP
-            description = "Player with this permission can use /morefish shop command."
         }
     }
 }

@@ -1,6 +1,6 @@
 package me.elsiff.morefish.listener;
 
-import me.elsiff.morefish.MoreFish;
+import me.elsiff.morefish.Rby;
 import me.elsiff.morefish.util.ItemBuilder;
 import org.bukkit.Material;
 import org.bukkit.entity.Player;
@@ -15,11 +15,11 @@ import org.bukkit.inventory.ItemStack;
 import java.util.*;
 
 public class RewardsGUI implements Listener {
-    private final MoreFish plugin;
+    private final Rby plugin;
     private final Set<UUID> users = new HashSet<>();
     private final Map<UUID, Integer> editors = new HashMap<>();
 
-    public RewardsGUI(MoreFish plugin) {
+    public RewardsGUI(Rby plugin) {
         this.plugin = plugin;
     }
 

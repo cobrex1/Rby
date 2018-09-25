@@ -1,5 +1,5 @@
 #
-# fish_en.yml for MoreFish
+# fish_en.yml for Rby
 # translated by mattematti1 (2.1.0)
 #
 # Wiki:
@@ -150,7 +150,7 @@ fish-list:
         id: "minecraft:cod"
       commands:
       - "minecraft:effect give @p minecraft:poison 3 1"
-      - "tellraw @p [\"\",{\"text\":\"[MoreFish]\",\"color\":\"aqua\"},{\"text\":\" La medusa ti fa sentire molto male!\",\"color\":\"none\"}]"
+      - "tellraw @p [\"\",{\"text\":\"[Rby]\",\"color\":\"aqua\"},{\"text\":\" La medusa ti fa sentire molto male!\",\"color\":\"none\"}]"
     Squid:
       display-name: "Polipo"
       length-min: 30
@@ -159,7 +159,7 @@ fish-list:
         id: "minecraft:ink_sac"
       commands:
       - "minecraft:effect give @p minecraft:blindness 5 1"
-      - "tellraw @p [\"\",{\"text\":\"[MoreFish]\",\"color\":\"aqua\"},{\"text\":\" Il polipo ti ha riempito di inchiostro!\",\"color\":\"none\"}]"
+      - "tellraw @p [\"\",{\"text\":\"[Rby]\",\"color\":\"aqua\"},{\"text\":\" Il polipo ti ha riempito di inchiostro!\",\"color\":\"none\"}]"
     Flatfish:
       display-name: "Pesce Piatto"
       length-min: 40

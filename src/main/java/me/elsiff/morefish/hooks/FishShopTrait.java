@@ -1,6 +1,6 @@
 package me.elsiff.morefish.hooks;
 
-import me.elsiff.morefish.MoreFish;
+import me.elsiff.morefish.Rby;
 import net.citizensnpcs.api.event.NPCRightClickEvent;
 import net.citizensnpcs.api.trait.Trait;
 import net.citizensnpcs.api.trait.TraitName;
@@ -16,7 +16,7 @@ public class FishShopTrait extends Trait {
     @EventHandler
     public void click(NPCRightClickEvent event) {
         if (event.getNPC() == this.getNPC()) {
-            MoreFish.getInstance().getFishShopGUI().openGUI(event.getClicker());
+            Rby.getInstance().getFishShopGUI().openGUI(event.getClicker());
         }
     }
 }

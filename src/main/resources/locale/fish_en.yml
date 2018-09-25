@@ -1,5 +1,5 @@
 #
-# fish_en.yml for MoreFish
+# fish_en.yml for Rby
 # by elsiff
 #
 # Wiki:
@@ -150,7 +150,7 @@ fish-list:
         id: "minecraft:cod"
       commands:
       - "minecraft:effect give @p minecraft:poison 3 1"
-      - "tellraw @p [\"\",{\"text\":\"[MoreFish]\",\"color\":\"aqua\"},{\"text\":\" The jellyfish made you feel very bad!\",\"color\":\"none\"}]"
+      - "tellraw @p [\"\",{\"text\":\"[Rby]\",\"color\":\"aqua\"},{\"text\":\" The jellyfish made you feel very bad!\",\"color\":\"none\"}]"
     Squid:
       display-name: "Squid"
       length-min: 30
@@ -159,7 +159,7 @@ fish-list:
         id: "minecraft:ink_sac"
       commands:
       - "minecraft:effect give @p minecraft:blindness 5 1"
-      - "tellraw @p [\"\",{\"text\":\"[MoreFish]\",\"color\":\"aqua\"},{\"text\":\" The squid gifted you some darkness!\",\"color\":\"none\"}]"
+      - "tellraw @p [\"\",{\"text\":\"[Rby]\",\"color\":\"aqua\"},{\"text\":\" The squid gifted you some darkness!\",\"color\":\"none\"}]"
     Flatfish:
       display-name: "Flatfish"
       length-min: 40
