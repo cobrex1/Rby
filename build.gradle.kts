@@ -8,6 +8,11 @@ plugins {
 group = "net.piratjsk"
 version = "2.2"
 
+java {
+    sourceCompatibility = JavaVersion.VERSION_1_8
+    targetCompatibility = JavaVersion.VERSION_1_8
+}
+
 repositories {
     jcenter()
     maven("https://hub.spigotmc.org/nexus/content/repositories/snapshots/")

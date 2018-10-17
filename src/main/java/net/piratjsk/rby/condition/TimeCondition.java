@@ -1,24 +1,19 @@
 package net.piratjsk.rby.condition;
 
-import org.bukkit.entity.Player;
-
 public class TimeCondition implements Condition {
     private final String time;
 
-    public TimeCondition(String time) {
+    public TimeCondition(final String time) {
         this.time = time;
     }
 
     @Override
-    public boolean isSatisfied(Player player) {
-        long tick = player.getWorld().getTime();
-        switch (time) {
-            case "day":
-                return (1000 <= tick && tick < 13000);
-            case "night":
-                return (13000 <= tick || tick < 1000);
-            default:
-                return false;
-        }
+    public boolean isSatisfied(final PotentialCatchData data) {
+        final long tick = data.getWorld().getTime();
+        return time.equalsIgnoreCase("day") ?
+                (1000 <= tick && tick < 13000)
+                :
+                time.equalsIgnoreCase("night") && (13000 <= tick || tick < 1000);
     }
+
 }

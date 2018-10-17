@@ -7,14 +7,16 @@ public class PotionEffectCondition implements Condition {
     private final PotionEffectType effectType;
     private final int amplifier;
 
-    public PotionEffectCondition(PotionEffectType effectType, int amplifier) {
+    public PotionEffectCondition(final PotionEffectType effectType, final int amplifier) {
         this.effectType = effectType;
         this.amplifier = amplifier;
     }
 
     @Override
-    public boolean isSatisfied(Player player) {
-        return (player.hasPotionEffect(effectType) &&
-                player.getPotionEffect(effectType).getAmplifier() >= amplifier);
+    public boolean isSatisfied(final PotentialCatchData data) {
+        final Player player = data.getPlayer();
+        return player.hasPotionEffect(effectType) &&
+                player.getPotionEffect(effectType).getAmplifier() >= amplifier;
     }
+
 }

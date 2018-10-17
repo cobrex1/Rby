@@ -1,16 +1,15 @@
 package net.piratjsk.rby.condition;
 
-import org.bukkit.entity.Player;
-
 public class ThunderingCondition implements Condition {
     private final boolean thundering;
 
-    public ThunderingCondition(boolean thundering) {
+    public ThunderingCondition(final boolean thundering) {
         this.thundering = thundering;
     }
 
     @Override
-    public boolean isSatisfied(Player player) {
-        return (thundering == player.getWorld().isThundering());
+    public boolean isSatisfied(final PotentialCatchData data) {
+        return (thundering == data.getWorld().isThundering());
     }
+
 }

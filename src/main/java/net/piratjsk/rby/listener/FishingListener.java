@@ -2,6 +2,7 @@ package net.piratjsk.rby.listener;
 
 import net.piratjsk.rby.CaughtFish;
 import net.piratjsk.rby.Rby;
+import net.piratjsk.rby.condition.PotentialCatchData;
 import net.piratjsk.rby.event.PlayerCatchCustomFishEvent;
 import net.piratjsk.rby.manager.ContestManager;
 import org.bukkit.ChatColor;
@@ -76,7 +77,7 @@ public class FishingListener implements Listener {
     }
 
     private void executeFishingActions(Player catcher, PlayerFishEvent event) {
-        CaughtFish fish = plugin.getFishManager().generateRandomFish(catcher);
+        CaughtFish fish = plugin.getFishManager().generateRandomFish(new PotentialCatchData(catcher, event.getHook().getLocation()));
         if (fish == null) return;
 
         PlayerCatchCustomFishEvent customEvent = new PlayerCatchCustomFishEvent(catcher, fish, event);

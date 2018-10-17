@@ -11,6 +11,7 @@ import net.piratjsk.rby.condition.EnchantmentCondition;
 import net.piratjsk.rby.condition.HeightCondition;
 import net.piratjsk.rby.condition.LevelCondition;
 import net.piratjsk.rby.condition.MCMMOSkillCondition;
+import net.piratjsk.rby.condition.PotentialCatchData;
 import net.piratjsk.rby.condition.PotionEffectCondition;
 import net.piratjsk.rby.condition.RainingCondition;
 import net.piratjsk.rby.condition.ThunderingCondition;
@@ -136,14 +137,11 @@ public class FishManager {
             }
         }
 
-        if (section.contains(path + ".conditions")) {
-            List<String> list = section.getStringList(path + ".conditions");
-
-            for (String content : list) {
-                Condition condition = getCondition(content);
-                conditions.add(condition);
-            }
-        }
+        final List<Map<?,?>> conds = section.getMapList(path + ".conditions");
+        conds.forEach(cond -> {
+            final String id = (String) cond.keySet().toArray()[0];
+            conditions.add(Rby.getInstance().getCondition(id, cond));
+        });
 
         return new CustomFish(path, displayName, lengthMin, lengthMax, icon, skipItemFormat,
                 commands, foodEffects, conditions, rarity);
@@ -153,7 +151,7 @@ public class FishManager {
         ItemStack itemStack;
 
         String id = section.getString(path + ".icon.id");
-        Material material = IdentityUtils.getMaterial(id);
+        Material material = Material.matchMaterial(id);
         if (material == null) {
             plugin.getLogger().warning("'" + id + "' is invalid item id!");
             return null;
@@ -269,12 +267,12 @@ public class FishManager {
         return condition;
     }
 
-    public CaughtFish generateRandomFish(Player catcher) {
+    public CaughtFish generateRandomFish(PotentialCatchData data) {
         Rarity rarity = getRandomRarity();
-        CustomFish type = getRandomFish(rarity, catcher);
+        CustomFish type = getRandomFish(rarity, data);
         if (type == null) return null;
 
-        return createCaughtFish(type, catcher);
+        return createCaughtFish(type, data.getPlayer());
     }
 
     public CustomFish getCustomFish(String name) {
@@ -363,7 +361,7 @@ public class FishManager {
         return null;
     }
 
-    private CustomFish getRandomFish(Rarity rarity, Player player) {
+    private CustomFish getRandomFish(Rarity rarity, PotentialCatchData data) {
         List<CustomFish> list = new ArrayList<>(rarityMap.get(rarity));
 
         Iterator<CustomFish> it = list.iterator();
@@ -372,7 +370,7 @@ public class FishManager {
 
             boolean remove = false;
             for (Condition condition : fish.getConditions()) {
-                if (!condition.isSatisfied(player)) {
+                if (!condition.isSatisfied(data)) {
                     remove = true;
                 }
             }

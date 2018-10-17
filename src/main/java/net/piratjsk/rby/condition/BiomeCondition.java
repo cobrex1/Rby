@@ -2,7 +2,6 @@ package net.piratjsk.rby.condition;
 
 import org.bukkit.Location;
 import org.bukkit.block.Biome;
-import org.bukkit.entity.Player;
 
 public class BiomeCondition implements Condition {
     private final Biome biome;
@@ -12,8 +11,10 @@ public class BiomeCondition implements Condition {
     }
 
     @Override
-    public boolean isSatisfied(Player player) {
-        Location loc = player.getLocation();
-        return (biome == player.getWorld().getBiome(loc.getBlockX(), loc.getBlockZ()));
+    public boolean isSatisfied(final PotentialCatchData data) {
+        final Location loc = data.getCatchLocation();
+        final Biome biome = loc.getWorld().getBiome(loc.getBlockX(), loc.getBlockZ());
+        return this.biome.equals(biome);
     }
+
 }

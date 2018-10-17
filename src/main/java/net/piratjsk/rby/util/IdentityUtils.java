@@ -1,18 +1,12 @@
 package net.piratjsk.rby.util;
 
-import org.bukkit.Material;
 import org.bukkit.NamespacedKey;
 import org.bukkit.enchantments.Enchantment;
 import org.bukkit.potion.PotionEffectType;
 
-public class IdentityUtils {
-    private IdentityUtils() {
-        throw new IllegalAccessError("Utility class");
-    }
+public final class IdentityUtils {
 
-    public static Material getMaterial(String minecraftId) {
-        return Material.matchMaterial(minecraftId);
-    }
+    private IdentityUtils() { }
 
     public static Enchantment getEnchantment(String minecraftId) {
         final NamespacedKey key = NamespacedKey.minecraft(getNameWithoutNamespace(minecraftId));
@@ -26,4 +20,5 @@ public class IdentityUtils {
     private static String getNameWithoutNamespace(final String minecraftId) {
         return minecraftId.contains(":") ? minecraftId.split(":")[1] : minecraftId;
     }
+
 }

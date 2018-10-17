@@ -6,12 +6,11 @@ import org.bukkit.inventory.ItemStack;
 
 import java.util.UUID;
 
-public class SkullUtils {
-    private SkullUtils() {
-        throw new IllegalAccessError("Utility class");
-    }
+public final class SkullUtils {
 
-    public static ItemStack setSkullTexture(ItemStack item, String value) {
+    private SkullUtils() { }
+
+    public static ItemStack setSkullTexture(final ItemStack item, final String value) {
         if (isPlayerHead(item)) {
             Bukkit.getUnsafe().modifyItemStack(item, "{SkullOwner:{Id:\"" + UUID.randomUUID().toString() + "\",Properties:{textures:[{Value:\"" + value + "\"}]}}}");
         }
