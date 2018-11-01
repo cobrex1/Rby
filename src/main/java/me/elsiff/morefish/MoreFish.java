@@ -81,7 +81,12 @@ public class MoreFish extends JavaPlugin {
                 getLogger().info("Found Vault for economy support.");
             } else {
                 vaultHook = null;
+                getLogger().warning("Cannot setup economy support using Vault. Without it fish shop will not be working.");
+                getLogger().info("To enable economy support you need Vault and an economy plugin.");
             }
+        } else {
+            getLogger().warning("Vault not found. Without it fish shop will not be working.");
+            getLogger().info("To download Vault head to: https://dev.bukkit.org/projects/vault");
         }
 
         if (manager.getPlugin("Citizens") != null && manager.getPlugin("Citizens").isEnabled()) {
@@ -138,11 +143,17 @@ public class MoreFish extends JavaPlugin {
         if (this.fishShopGUI != null)
             return;
 
-        if (hasEconomy() && getConfig().getBoolean("fish-shop.enable")) {
-            this.fishShopGUI = new FishShopGUI(this);
-            manager.registerEvents(new SignListener(this), this);
-            manager.registerEvents(fishShopGUI, this);
+        if (!getConfig().getBoolean("fish-shop.enable", false))
+            return;
+
+        if (!hasEconomy()) {
+            getLogger().warning("Cannot enable fish shop. Economy support is not enabled.");
+            return;
         }
+
+        this.fishShopGUI = new FishShopGUI(this);
+        manager.registerEvents(new SignListener(this), this);
+        manager.registerEvents(fishShopGUI, this);
     }
 
     public void scheduleAutoRunning() {
