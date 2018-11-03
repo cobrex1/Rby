@@ -2,6 +2,7 @@ import net.minecrell.pluginyml.bukkit.BukkitPluginDescription
 
 plugins {
     java
+    kotlin("jvm") version "1.3.0"
     id("net.minecrell.plugin-yml.bukkit") version "0.3.0"
 }
 
@@ -24,6 +25,7 @@ repositories {
 }
 
 dependencies {
+    implementation(kotlin("stdlib-jdk8"))
     compileOnly("org.bukkit:bukkit:1.13.2-R0.1-SNAPSHOT")
     compileOnly("net.milkbowl.vault:VaultAPI:1.7")
     compileOnly("net.citizensnpcs:citizensapi:2.0.24-SNAPSHOT")
