@@ -6,7 +6,7 @@ plugins {
 }
 
 group = "net.piratjsk"
-version = "2.2"
+version = "0.1-SNAPSHOT"
 
 java {
     sourceCompatibility = JavaVersion.VERSION_1_8
